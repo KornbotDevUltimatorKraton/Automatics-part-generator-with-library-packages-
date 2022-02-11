@@ -1639,7 +1639,10 @@ def Packagefor_3dlibclass(input1,inputcomp,listConfig):
                                                if len(key_val) <= 1:
                                                     print("Getting name:",key_val[ik])
                                                     print("Getting package type:",values_pack[ik]) 
-                                                    print(Packagedrawing[len(Packagedrawing)-1])
+                                                    try:
+                                                        print(Packagedrawing[len(Packagedrawing)-1])
+                                                    except: 
+                                                        print("Package type error")
                                                     checkintersec = intersection(list(key_val[ik]),list(Packagedrawing[len(Packagedrawing)-1]))
                                                     if checkintersec != []:
                                                        print(checkintersec)
